@@ -2,7 +2,6 @@
 
 Integration
 -----------
-##Requirement
 
 * install SDK for [android](https://github.com/paypal/PayPal-Android-SDK) or [iOS](https://github.com/paypal/PayPal-iOS-SDK)
 * install plugin via cordova cli:
