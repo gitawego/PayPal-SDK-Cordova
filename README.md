@@ -36,13 +36,13 @@ Sample code
 // and we defined a simple onclick function in our `deviceready` event
 var buyButton = document.getElementById("buyButton");
 buyButton.onclick = function(e) {
-
+  var PayPalMobile = window.plugins.PayPalMobile;
   // See PayPalMobilePGPlugin.js for full documentation
   // set environment you want to use
-  window.plugins.PayPalMobile.setEnvironment("PayPalEnvironmentNoNetwork");
+  PayPalMobile.setEnvironment("PayPalEnvironmentNoNetwork");
 
   // create a PayPalPayment object, usually you would pass parameters dynamically
-  var payment = new PayPalPayment("1.99", "USD", "Awesome saws");
+  var payment = PayPalMobile.payment("1.99", "USD", "Awesome saws");
   
   // define a callback when payment has been completed
   var completionCallback = function(proofOfPayment) {
@@ -57,6 +57,6 @@ buyButton.onclick = function(e) {
   }
   
   // launch UI, the PayPal UI will be present on screen until user cancels it or payment completed
-  window.plugins.PayPalMobile.presentPaymentUI("YOUR_CLIENT_ID", "YOUR_PAYPAL_EMAIL_ADDRESS", "someuser@somedomain.com", payment, completionCallback, cancelCallback);
+  PayPalMobile.presentPaymentUI("YOUR_CLIENT_ID", "YOUR_PAYPAL_EMAIL_ADDRESS", "someuser@somedomain.com", payment, completionCallback, cancelCallback);
 }
 ```

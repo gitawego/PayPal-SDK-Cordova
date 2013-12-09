@@ -3,12 +3,6 @@ var exec = require('cordova/exec');
 //  PayPalMobile.js
 //
 
-function PayPalPayment(amount, currency, shortDescription) {
-  this.amount = amount;
-  this.currency = currency;
-  this.shortDescription = shortDescription;
-}
-
 /**
  * This class exposes the PayPal iOS SDK functionality to javascript.
  *
@@ -16,6 +10,13 @@ function PayPalPayment(amount, currency, shortDescription) {
  */
 function PayPalMobile() {}
 
+PayPalMobile.prototype.payment = function(amount, currency, shortDescription){
+  return {
+    amount:amount,
+    currency:currency,
+    shortDescription:shortDescription
+  }
+};
 
 /**
  * Retrieve the version of the PayPal iOS SDK library. Useful when contacting support.
