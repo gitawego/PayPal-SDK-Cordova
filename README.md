@@ -3,12 +3,14 @@
 Integration
 -----------
 ##Requirement
+
 ###Android
 - Download the [PayPal Android SDK](https://github.com/paypal/PayPal-Android-SDK).
 - Read the [Android Integration Guide](https://developer.paypal.com/webapps/developer/docs/integration/mobile/android-integration-guide/) for
    conceptual information that will be useful during integration.
 - Follow the "Initial setup" instructions in the [Android Integration Guide](https://developer.paypal.com/webapps/developer/docs/integration/mobile/android-integration-guide/) to add the
    required files, acknowledgments and `AndroidManifest.xml` modifications to your app.
+
 ###IOS
 - Download the [PayPal iOS SDK](https://github.com/paypal/PayPal-iOS-SDK)
 - Read the [iOS Integration Guide](https://developer.paypal.com/webapps/developer/docs/integration/mobile/ios-integration-guide/) for
