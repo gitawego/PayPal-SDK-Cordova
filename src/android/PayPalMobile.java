@@ -1,4 +1,4 @@
-package com.paypal.sdk.cordova.paypal;
+package com.paypal.sdk.cordova.paypalmobile;
 
 import java.math.BigDecimal;
 
