@@ -21,7 +21,7 @@ Integration
 ##Installation
 install it via cordova cli:
 ```
-cordova plugin add https://github.com/gitawego/PayPal-SDK-PhoneGap.git
+cordova plugin add https://github.com/gitawego/PayPal-SDK-Cordova.git
 ```
 
 
