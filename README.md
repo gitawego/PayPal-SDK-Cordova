@@ -1,28 +1,28 @@
-# PayPal Android SDK PhoneGap Plug-in
-
+# PayPal SDK Cordova Plug-in
 
 Integration
 -----------
-0. Download the [PayPal Android SDK](https://github.com/paypal/PayPal-Android-SDK).
-1. Read the [Android Integration Guide](https://developer.paypal.com/webapps/developer/docs/integration/mobile/android-integration-guide/) for
+##Requirement
+###Android
+- Download the [PayPal Android SDK](https://github.com/paypal/PayPal-Android-SDK).
+- Read the [Android Integration Guide](https://developer.paypal.com/webapps/developer/docs/integration/mobile/android-integration-guide/) for
    conceptual information that will be useful during integration.
-2. Follow the "Initial setup" instructions in the [Android Integration Guide](https://developer.paypal.com/webapps/developer/docs/integration/mobile/android-integration-guide/) to add the
+- Follow the "Initial setup" instructions in the [Android Integration Guide](https://developer.paypal.com/webapps/developer/docs/integration/mobile/android-integration-guide/) to add the
    required files, acknowledgments and `AndroidManifest.xml` modifications to your app.
-3. Add `PayPalMobilePGPlugin.java` to your project, in `src/com/paypal/android/sdk/phonegap`.
-4. Copy `PayPalMobilePGPlugin.js` to your project's `www/js` folder.
-5. Add the following to `res/xml/config.xml` for PhoneGap version 3.0+:
+###IOS
+- Download the [PayPal iOS SDK](https://github.com/paypal/PayPal-iOS-SDK)
+- Read the [iOS Integration Guide](https://developer.paypal.com/webapps/developer/docs/integration/mobile/ios-integration-guide/) for
+   conceptual information that will be useful during integration.
+- Follow the "Initial setup" instructions in the [iOS Integration Guide](https://developer.paypal.com/webapps/developer/docs/integration/mobile/ios-integration-guide/) to add the
+   required files, linker flags, frameworks, and acknowledgments to your app.
 
-    ```xml
-     <feature name="PayPalMobile">
-       <param name="android-package" value="com.paypal.android.sdk.phonegap.PayPalMobilePGPlugin" />
-     </feature>
-    ```
+##Installation
+install it via cordova cli:
+```
+cordova plugin add https://github.com/gitawego/PayPal-SDK-PhoneGap.git
+```
 
-   for older versions under the `plugins` tag:
-    
-    ```xml
-    <plugin name="PayPalMobile" value="com.paypal.android.sdk.phonegap.PayPalMobilePGPlugin" />
-    ```
+
 
 Sample code
 -----------
