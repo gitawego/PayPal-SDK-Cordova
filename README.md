@@ -4,22 +4,8 @@ Integration
 -----------
 ##Requirement
 
-###Android
-- Download the [PayPal Android SDK](https://github.com/paypal/PayPal-Android-SDK).
-- Read the [Android Integration Guide](https://developer.paypal.com/webapps/developer/docs/integration/mobile/android-integration-guide/) for
-   conceptual information that will be useful during integration.
-- Follow the "Initial setup" instructions in the [Android Integration Guide](https://developer.paypal.com/webapps/developer/docs/integration/mobile/android-integration-guide/) to add the
-   required files, acknowledgments and `AndroidManifest.xml` modifications to your app.
-
-###IOS
-- Download the [PayPal iOS SDK](https://github.com/paypal/PayPal-iOS-SDK)
-- Read the [iOS Integration Guide](https://developer.paypal.com/webapps/developer/docs/integration/mobile/ios-integration-guide/) for
-   conceptual information that will be useful during integration.
-- Follow the "Initial setup" instructions in the [iOS Integration Guide](https://developer.paypal.com/webapps/developer/docs/integration/mobile/ios-integration-guide/) to add the
-   required files, linker flags, frameworks, and acknowledgments to your app.
-
-##Installation
-install it via cordova cli:
+* install SDK for [android](https://github.com/paypal/PayPal-Android-SDK) or [iOS](https://github.com/paypal/PayPal-iOS-SDK)
+* install plugin via cordova cli:
 ```
 cordova plugin add https://github.com/gitawego/PayPal-SDK-Cordova.git
 ```
