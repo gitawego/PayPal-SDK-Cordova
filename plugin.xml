@@ -40,7 +40,7 @@
                 android:configChanges="keyboardHidden|orientation" />
             <activity android:name="io.card.payment.DataEntryActivity" />
         </config-file>
-        <source-file src="src/android/PayPalMobile.java" target-dir="com/paypal/sdk/cordova" />
+        <source-file src="src/android/PayPalMobile.java" target-dir="src/com/paypal/sdk/cordova" />
     </platform>
     <!-- ios -->
     <platform name="ios">
