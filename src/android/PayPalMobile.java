@@ -1,4 +1,4 @@
-package com.paypal.android.sdk.phonegap;
+package com.paypal.sdk.phonegap;
 
 import java.math.BigDecimal;
 
@@ -17,7 +17,7 @@ import com.paypal.android.sdk.payments.PaymentActivity;
 import com.paypal.android.sdk.payments.PaymentConfirmation;
 import com.paypal.android.sdk.payments.Version;
 
-public class PayPalMobilePGPlugin extends CordovaPlugin {
+public class PayPalMobile extends CordovaPlugin {
 
 	private CallbackContext callbackContext;
 	private String environemnt = PaymentActivity.ENVIRONMENT_LIVE;

@@ -1,5 +1,6 @@
+var exec = require('cordova/exec');
 //
-//  PayPalMobilePGPlugin.js
+//  PayPalMobile.js
 //
 
 function PayPalPayment(amount, currency, shortDescription) {
@@ -26,7 +27,7 @@ PayPalMobile.prototype.version = function(callback) {
     console.log("Could not retrieve PayPal library version");
   };
 
-  cordova.exec(callback, failureCallback, "PayPalMobile", "version", []);
+  exec(callback, failureCallback, "PayPalMobile", "version", []);
 };
 
 
@@ -41,7 +42,7 @@ PayPalMobile.prototype.setEnvironment = function(environment) {
     console.log(error);
   };
 
-  cordova.exec(null, failureCallback, "PayPalMobile", "setEnvironment", [environment]);
+  exec(null, failureCallback, "PayPalMobile", "setEnvironment", [environment]);
 };
 
 /**
@@ -54,7 +55,7 @@ PayPalMobile.prototype.environment = function(callback) {
     console.log("Could not retrieve PayPal environment");
   };
 
-  cordova.exec(callback, failureCallback, "PayPalMobile", "environment", []);
+  exec(callback, failureCallback, "PayPalMobile", "environment", []);
 };
 
 /**
@@ -71,7 +72,7 @@ PayPalMobile.prototype.prepareForPayment = function(clientId) {
     console.log("Could not perform prepareForPurchase " + message);
   };
 
-  cordova.exec(null, failureCallback, "PayPalMobile", "prepareForPayment", [clientId]);
+  exec(null, failureCallback, "PayPalMobile", "prepareForPayment", [clientId]);
 };
 
 
@@ -88,18 +89,8 @@ PayPalMobile.prototype.prepareForPayment = function(clientId) {
  * @parameter cancelCallback: a callback function accepting a reason string, called when the user cancels the payment
  */
 PayPalMobile.prototype.presentPaymentUI = function(clientId, email, payerId, payment, completionCallback, cancelCallback) {
-  cordova.exec(completionCallback, cancelCallback, "PayPalMobile", "presentPaymentUI", [clientId, email, payerId, payment]);
+  exec(completionCallback, cancelCallback, "PayPalMobile", "presentPaymentUI", [clientId, email, payerId, payment]);
 };
 
-/**
- * Plugin setup boilerplate.
- */
-cordova.addConstructor(function() {
-  if (!window.plugins) {
-    window.plugins = {};
-  }
+module.exports = new PayPalMobile();
 
-  if (!window.plugins.PayPalMobile) {
-    window.plugins.PayPalMobile = new PayPalMobile();
-  }
-});
