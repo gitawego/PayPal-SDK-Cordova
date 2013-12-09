@@ -1,4 +1,4 @@
-package com.paypal.sdk.phonegap;
+package com.paypal.sdk.cordova;
 
 import java.math.BigDecimal;
 
